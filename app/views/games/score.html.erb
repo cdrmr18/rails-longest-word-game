@@ -1,0 +1,12 @@
+<H1>RESULT</H1>
+
+<% if @word_check_result == false %>
+  <div>Sorry can't build.</div>
+<% elsif @found == true%>
+  <div>Congrats! <%= @word.capitalize  %> is a valid English word. </div>
+<% else %>
+  <div>Sorry but <%= @word.capitalize %> is not an English word mate.</div>
+<% end %>
+
+<%= link_to "Play again", new_path %>
+
